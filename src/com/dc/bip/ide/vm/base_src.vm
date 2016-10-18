@@ -1,0 +1,60 @@
+/*
+ * <p>Title: :${className}.java </p>
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2016</p>
+ * <p>Company: digitalchina.Ltd</p>
+ * @author 
+ * Created :${Date}
+ * @version 1.0
+ * ModifyList:
+ * <Author> <Time(yyyy/mm/dd)>  <Description>  <Version>
+ */
+
+package ${packageName};
+
+import org.apche.commons.logging.Log;
+import org.apche.commons.logging.LogFactory;
+
+import com.dcits.smartbip.exception.InvokeException;
+import com.dcits.smartbip.runtime.model.IService;
+import com.dcits.smartbip.runtime.model.impl.AbstractBaseService;
+
+
+/**
+ * <p>
+ * 
+ * <li>
+ * </li>
+ * </p>
+ * 
+ * @author 
+ * @E-Mail 
+ */
+public class ${className} extends AbstractBaseService implements IBaseService {
+
+    public static final Log log = LogFactory.getLog(${className}.class);
+ 
+    public String getId(){
+       return "${className}";    
+    }
+    
+    public String getType(){
+       return "base";
+    }
+    
+    public void setType(String type){
+    
+    }
+    
+    public Object execute (Object req) throws InvokeException {
+       if(log.isInfoEnabled()){
+           log.info("开始调用基础服务[${className}].......");
+       }
+       
+       if(log.isInfoEnabled()){
+           log.info("调用基础服务结束[${className}].......");
+       }
+    }
+    
+    
+}
